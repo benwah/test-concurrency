@@ -25,6 +25,30 @@ While waiting in line at Starbucks, Alex Topalov is approving a pull request.
 ... A single-core computer cannot run things in parallel
 
 
+## Concurrently!
+
+Plan:
+
+* Spawn VM with 1 core
+* Test Expensive job, Single, Multi Thread, Multi Process, note results
+* Test IO Bound job, Single, Multi Thread, Multi Process, note results
+
+## Parallel!
+
+* Spawn VM with 4 core
+* Test Expensive job, Single, Multi Thread, Multi Process, note results
+* Test IO Bound job, Single, Multi Thread, Multi Process, note results
+
+## Discuss...
+
+* How does this affect us?
+* Puma VS Unicorn
+* Sidekiq VS Resque
+
+## If there's time, profile this stuff
+
+
+
 https://github.com/ruby-prof/ruby-prof/blob/master/examples/graph.txt
 
 https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism
