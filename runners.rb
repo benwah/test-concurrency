@@ -15,13 +15,14 @@ class BaseRunner
   end
 
   def profile
-    RubyProf.measure_mode = RubyProf::PROCESS_TIME
-    profiler = RubyProf::Profile.new
-    profiler.exclude_methods!(BaseRunner, :profile)
-    profiler.exclude_common_methods!
-    profiler.start
     yield
-    print_result(profiler.stop)
+    RubyProf.measure_mode = RubyProf::PROCESS_TIME
+    # profiler = RubyProf::Profile.new
+    # profiler.exclude_methods!(BaseRunner, :profile)
+    # profiler.exclude_common_methods!
+    # profiler.start
+    # yield
+    # print_result(profiler.stop)
   end
 
   def print_result(result)
@@ -31,7 +32,6 @@ class BaseRunner
     # printer = RubyProf::FlatPrinter.new(result)
     f = File.open("#{self.class}.html", 'w')
     printer.print(f, {})
-    `open #{f.path}`
     # printer = RubyProf::MultiPrinter.new(result)
     # printer.print(:path => ".", :profile => "profile")
   end
