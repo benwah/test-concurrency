@@ -8,7 +8,7 @@ class BaseRunner
   end
 
   def run
-    puts "[#{self.class}] Doing job #{@number_of_times} times."
+    puts "[#{self.class}] Doing #{@job} #{@number_of_times} times."
     start_time = Time.now.utc
     perform
     puts "Total time: #{Time.now.utc - start_time}s"
