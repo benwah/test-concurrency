@@ -3,7 +3,7 @@ require 'net/http'
 require 'pry'
 
 class IoBoundJob
-  URL = URI('http://localhost:4567')
+  URL = URI(ENV['URL'])
 
   def initialize(job_number)
     @job_number = job_number
