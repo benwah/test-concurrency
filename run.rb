@@ -2,7 +2,7 @@ require_relative './expensive_job.rb'
 require_relative './io_bound_job.rb'
 require_relative './runners.rb'
 
-NUMBER_OF_TIMES = 6
+NUMBER_OF_TIMES = ENV['TIMES'].to_i
 
 SingleThreaded.new(ExpensiveJob, NUMBER_OF_TIMES).run
 MultiThreaded.new(ExpensiveJob, NUMBER_OF_TIMES).run
