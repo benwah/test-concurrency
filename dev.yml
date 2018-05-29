@@ -1,0 +1,6 @@
+name: concurrencything
+
+up:
+  - ruby:
+      version: 2.4.4
+  - bundler
