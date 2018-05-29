@@ -1,6 +1,8 @@
 require 'sinatra'
 # require 'bundler/setup'
 
+set :bind, '0.0.0.0'
+
 get '/' do
   sleep(1)
   '/'
